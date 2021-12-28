@@ -1,0 +1,185 @@
+@import url(  'https://fonts.googleapis.com/css2?familyOutfit:wght@500;900&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;900&family=Playfair+Display:wght@700&family=Poppins:wght@600&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    min-height: 100vh;
+    background-color: #90be6d;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+ 
+}
+
+nav{
+        background-color:#212529;
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+      position: fixed;
+      margin-bottom: 10px;
+}
+
+nav button{
+   position: fixed;
+   top:10px;
+   right:20px;
+   font-size: medium;
+  font-family:  'Poppins', sans-serif;
+  border: 2px solid #a7b0ca;
+  background-color: #7400b8;
+  color: white;
+  border-radius: 12px;
+  box-shadow:1px px #7400b8;
+
+}
+nav button:hover{
+    font-size:larger;
+}
+#list{
+       display: flex;
+       list-style: none;
+}
+#list a{
+    text-decoration: none;
+    color: #edf2f4;
+    padding: 5rem;
+    font-size: medium;
+    font-family: 'Poppins', sans-serif;
+}
+#head{
+    text-align: center;
+    display: block;
+    background-color: #7f4f24;
+    margin-top: 0px;
+    padding: 1.5rem;
+    font-size:20pt;
+   font-family: 'Playfair Display', serif;
+   color: white;
+}
+
+
+img{
+     height: 400px;
+     width: 400px;
+     object-fit: cover;
+     margin: 0%;
+}
+#album1 ,#album2 ,#album3{
+     display:inline-block;
+     padding: 1rem;
+    margin: 0px;
+    align-items: center;
+}
+
+#album4 ,#album5 ,#album6 {
+     display:inline-block; 
+    padding: 1rem;
+   justify-content: center;
+   align-items: center;
+}
+
+#album1,#album4{
+    margin-left: 10px;
+}
+h3{
+    color: black;
+    text-align: center;
+}
+.prod-details button{
+    margin-left: 111px;
+     font-family:  'Poppins', sans-serif;
+     border: 2px solid #a7b0ca;
+     background-color: #7400b8;
+     color: white;
+     border-radius: 6px;
+     box-shadow:1px px #7400b8;
+}
+.prod-details button:hover
+{
+    background-color: #90be6d;
+}
+.prod-details{
+    margin-left: 130px;
+}
+.prod-details span{
+    color: white;
+   font-size: large;
+}
+.container img:hover{
+    border: 2px solid ;
+}
+h2{
+    text-align: center;
+    text-shadow: 2px 2px 5px  #4361ee;
+    color:#fefae0;
+    margin-top: 0;
+    background-color: #283618;
+}
+
+#merch-content{
+    display: flex;
+    align-items: center;
+}
+#t-shirt ,#coffe-cup{
+     margin-left: 100px;
+   padding: 5rem;
+}
+#merch{
+    padding-top: 100px;
+}
+
+.cart-btn-bottom {
+    display: flex;
+    background-color:#7400b8 ;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+     align-items: center;
+     margin-left: 558px;
+     border-radius: 5px;
+     border: none;
+     margin-bottom: 50px;
+}
+
+.cart-btn-bottom:hover{
+    background-color: #90be6d;
+    border: 2px solid #7400b8 ;
+    
+}
+
+.cart-btn-bottom a{
+      text-decoration: none;
+     color: white;
+     font-size: larger;
+     
+}
+
+.footer-title{margin: 0%;
+font-size: 57px;
+}
+.footer-icons{
+ margin-left: 600px;
+
+}
+
+.footer-icons li{
+    display: inline-flex;
+    list-style: none;
+    padding: 1rem;
+}
+
+.footer-icons img{
+     height: 60px;
+     width: 62px;
+     object-fit: cover;
+    padding: 1rem;
+}
+footer{
+    display: flex;
+    background-color: #264653;
+}
+
