@@ -183,3 +183,193 @@ footer{
     background-color: #264653;
 }
 
+#cart{
+    position: fixed;
+    top:50px;
+    right:10px;
+   min-height: 100vh;
+    width :500px;
+     background-color: #fefae0;
+    display: none;
+}
+
+.cancel{
+ margin-left: 466px;
+ background-color: #ef233c;
+ padding: 0.5rem;
+ color:white;
+ border-radius: 60%;
+ border: none;
+}
+.cancel:hover{
+    background-color: white;
+    color:#ef233c;
+}
+
+.cart-total{
+    color: black;
+   margin-left: 200px;
+}
+.purchase-btn{
+    margin-left: 100px;
+    margin-top: 30px;
+    background-color:#7400b8 ;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 5px;
+    border:none;
+}
+.purchase-btn:hover{
+    padding: 0.7rem;
+    overflow: hidden;
+}
+.cartimages{
+    height: 20px;
+    width :20px;
+    object-fit: cover;
+}
+#cartitems div{
+    padding: 2rem;
+    color:black;
+    display: inline-block;
+}
+#cartitems ul{
+    
+    display: block;
+    list-style: none;
+}
+#items li{
+   padding-right: 0px;
+   margin: 0%;
+}
+#remove{
+       background-color: red;
+       border: none;
+       color: white;
+      margin-left: 1rem;
+}
+#remove:hover{
+    background-color:white;
+    color:red;
+}
+/* 
+
+   home
+*/
+.maincontent{
+    min-height: 100vh;
+    background-color: #354f52;
+}
+
+.contentcolumn{
+     height: 300px;
+     background-color: #264653;
+       display: flex;
+       
+ }
+ .contentcolumn img{
+     display: flex;
+     height: 300px;
+     width: 300px;
+     object-fit: cover;
+     border-radius: 76%;
+ }
+ #text{
+   font-size: xx-large;
+   height: 167px;
+ }
+ .contentcolumn button{
+    margin-top: 200px;
+ }
+ #h2tag{
+     margin: 0%;
+     font-size: 70px;
+      padding-left: 100px;
+ }
+ #book{
+     margin: 0%;
+     padding-top: 20px;
+     padding-left :30px;
+ }
+ .contentcolumn button{
+   margin-right: 50px;
+   padding: 2rem;
+   background-color: #264653;
+   color: white;
+   border: 1px solid #0077b6;
+   border-radius: 50%;
+ }
+
+ .tickets-column{
+     display: flex;
+     justify-content: center;
+    
+ }
+ .ticket{
+    justify-content: center;
+    padding-top: 2rem;
+ }
+ .ticketList{
+     display: flex;
+ }
+ 
+ .ticket span{
+     display: flex;
+     padding: 2rem;
+     color: orange;
+ }
+ .ticketList button{
+     float:left ;
+     background-color: #4361ee;
+     border: none;
+     border-radius: 1px;
+     color: white;
+ }
+ 
+ /* 
+ about page
+ */
+
+ .about{
+     min-height: 100vh;
+     display: flexbox;
+     justify-content: center;
+     align-items: center;
+ }
+ .aboutus{
+     background-color: none;
+ }
+ #contents{
+     display:flex;
+ }
+ #contents p{
+     height: 60vh;
+     width: 600px;
+     margin-left: 200px;
+     color: black;
+    word-spacing: 0.2rem;
+    line-height: 2rem;
+ }
+ #contents img{
+     border: none;
+     border-radius: 50%;
+     margin-top: 20px;
+ }
+
+
+ /* notfication */
+
+ #di{
+    position: fixed;
+    bottom :0px;
+    right: 20px;
+
+}
+.msg{
+    background-color: gray;
+    padding: 2rem;
+    align-items: center;
+    margin: 2rem;
+    border-radius: 2px;
+    border: 1px solid orange;
+}

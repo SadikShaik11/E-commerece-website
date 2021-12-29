@@ -13,24 +13,28 @@
     <header>
         <nav id="navbar">
             <ul id="list">
-                <li> <a href=""> Home</a></li>
-                <li> <a href="">Store</a></li>
-                <li> <a href="">About</a></li>
+                <li> <a href="Home.html"> Home</a></li>
+                <li> <a href="store.html" style="text-decoration: underline; color :chartreuse">Store</a></li>
+                <li> <a href="about.html">About</a></li>
 
             </ul>
-            <button id="cart">Cart</button>
+            <button id="openCart">Cart</button>
         </nav>
         <div id="head">
             <h1>The Genrics </h1>
         </div>
 
     </header>
-    <div class="all-content">
 
-        <div id ="music-content"class="container">
+     
+    <div class="container" id="di"></div>
+
+
+
+    <div class="all-content" id="allcontent">
+
+        <div id="music-content" class="container">
             <h2> Music </h2>
-
-
             <div id="album1">
                 <h3>Album 1</h3>
                 <div class="image-container">
@@ -38,11 +42,9 @@
                 </div>
                 <div class="prod-details">
                     <span>$<span>12.99</span></span>
-                    <button class="shop-item-button" type="button">ADD TO CART</button>
+                    <button class="shop-item-button" type="button" id="Button1">ADD TO CART</button>
                 </div>
             </div>
-
-
             <div id="album2">
                 <h3>Album 2</h3>
                 <div class="image-container">
@@ -63,7 +65,6 @@
                     <button class="shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-
             <div id="album4">
                 <h3>Album 4</h3>
                 <div class="image-container">
@@ -74,8 +75,6 @@
                     <button class="shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-
-
             <div id="album5">
                 <h3>Album 5</h3>
                 <div class="image-container">
@@ -86,7 +85,6 @@
                     <button class="shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-
             <div id="album6">
                 <h3>Album 6</h3>
                 <div class="image-container">
@@ -98,12 +96,7 @@
                 </div>
             </div>
 
-
-
-
-
         </div>
-
         <section id="merch" class="container">
             <h2>MERCH</h2>
             <div id="merch-content">
@@ -127,46 +120,79 @@
                         <button class="shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
+
             </div>
-
         </section>
+        <button class="cart-btn-bottom" id="bottombutton">
 
-        <button class="cart-btn-bottom"> 
-     
             <a href="#cart" class="cart-bottom">See the cart</a>
         </button>
-    
 
-        
-        <footer class>
-            <div class="footer-title">
-                The Generics
+
+
+        <section id="cart" class="container">
+            <h2>CART</h2>
+            <button class="cancel" id="cancel">X</button>
+            <div class="cart-row cart-header" id="cartitems">
+
+                <div id="items">
+                    ITEMS
+                    <ul id="itemlist">
+
+                    </ul>
+
+                </div>
+
+                <div id="price"> PRICE
+                    <ul id="pricelist">
+
+                    </ul>
+
+                </div>
+
+                <div> QUANTITY
+                    <ul id="quantity">
+
+                    </ul>
+
+                </div>
+
+
             </div>
-            <div class="footer-icons">
-                <ul>
-                    <li><a href="https://www.twitter.com">
-                        <img src="./images/twiiter.png" alt="">
-                    </a></li>
-                    <li><a href="https://spotify.com">
-                        <img src="./images/Spotify Logo.png" alt="">
-                    </a></li>
-                    <li><a href="https://facebook.com">
-                        <img src="./images/Facebook Logo (1).png" alt="">
-                    </a></li>
-                </ul>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+                <span>
+                    <span class="total-title"> <strong>Total</strong>
+                    </span>
+                    $<span id="total-value">0</span>
+                </span>
             </div>
-        </footer>
-  
+            <button class="purchase-btn" type="button">PURCHASE</button>
+        </section>
+
     </div>
 
+    <footer class>
+        <div class="footer-title">
+            The Generics
+        </div>
+        <div class="footer-icons">
+            <ul>
+                <li><a href="https://www.twitter.com">
+                        <img src="./images/twiiter.png" alt="">
+                    </a></li>
+                <li><a href="https://spotify.com">
+                        <img src="./images/Spotify Logo.png" alt="">
+                    </a></li>
+                <li><a href="https://facebook.com">
+                        <img src="./images/Facebook Logo (1).png" alt="">
+                    </a></li>
+            </ul>
+        </div>
+    </footer>
 
 
-
-
-
-
-
-
+    <script src="ecom.js"></script>
 
 </body>
 
