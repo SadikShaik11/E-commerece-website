@@ -6,6 +6,7 @@ var cors = require('cors')
 const ex = Express()
 ex.use(cors())
 const body_parser = require('body-parser');
+const { redirect } = require('express/lib/response');
 
 ex.use(body_parser.urlencoded({ extended: false }))
 
@@ -32,7 +33,10 @@ ex.get('/product', (req, res, next) => {
         console.log(body);
 
     })
-
+    ex.get('/cart',(res,req,next)=>{
+       const products=req.body
+       res.json(products);
+    })
 })
 
 ex.listen(4000);

@@ -48,7 +48,7 @@ function closeCart() {
 
 //adding item to cart 
 const parentContainer = document.getElementById('allcontent');
-let n = 'empty'
+
 parentContainer.addEventListener('click', (event) => {
 
     if (event.target.className == 'shop-item-button') {
@@ -74,7 +74,18 @@ parentContainer.addEventListener('click', (event) => {
 });
 //adding to cart 
 function AddTocart() {
-
+    let name;
+    let id;
+    let price;
+    let img;
+    axios.get('http://localhost:4000/cart').then((result) => {
+        id = result.products.id;
+        name = result.products.name;
+        image = result.products.image;
+        price = result.products.price;
+    }).catch((err) => {
+        console.log(err);
+    });
     const itemlist = document.getElementById('itemlist');
     const list = document.createElement('li');
     list.className = id;
