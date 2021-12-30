@@ -23,10 +23,15 @@ ex.get('/product', (req, res, next) => {
     `)
     ex.post('/product', (req, res, next) => {
         const products = req.body
-        res.json({ products })
+       res.json({products})
     }
     )
+    ex.post('/cart',(req,res,next)=>{
+        
+       const body= req.body
+        console.log(body);
 
+    })
 
 })
 

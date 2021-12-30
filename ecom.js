@@ -3,9 +3,9 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     //created a form in server js so here i added post
     axios.post('http://localhost:4000/product').then((result) => {
-          
+
         const products = result.data.products
-     console.log(products);
+        console.log(products);
         const music = document.getElementById('music-content')
 
         const element = `
@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
            </div>
            <div class="prod-details">
                <span>$<span>${products.price}</span></span>
+         <button class="shop-item-button" type="button" id="Button1">ADD TO CART</button>
            `
         music.innerHTML += element
 
@@ -57,21 +58,22 @@ parentContainer.addEventListener('click', (event) => {
         const image = document.querySelector(`#${id} img`).src;
         const price = event.target.parentNode.firstElementChild.firstElementChild.innerText;
 
-        if (n === name) {
-            alert(`you have ${name} in your cart already`);
-
-        }
-        else {
-            n = name;
-            AddTocart(id, name, image, price);
-
-        }
-
-
+        axios.post('http://localhost:4000/cart', {
+            id: ` ${id}`,
+            name: `${name}`,
+            image: `${image}`,
+            price: `${price}`
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 });
 //adding to cart 
-function AddTocart(id, name, image, price) {
+function AddTocart() {
 
     const itemlist = document.getElementById('itemlist');
     const list = document.createElement('li');
