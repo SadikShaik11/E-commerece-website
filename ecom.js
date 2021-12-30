@@ -1,5 +1,31 @@
 //opening cart
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    //created a form in server js so here i added post
+    axios.post('http://localhost:4000/product').then((result) => {
+          
+        const products = result.data.products
+     console.log(products);
+        const music = document.getElementById('music-content')
+
+        const element = `
+           <div id="${products.id}">
+           <h3>${products.name}</h3>
+           <div class="image-container">
+               <img class="prod-images" src="${products.image}" alt="">
+           </div>
+           <div class="prod-details">
+               <span>$<span>${products.price}</span></span>
+           `
+        music.innerHTML += element
+
+    }).catch((err) => {
+        console.log(err);
+    });
+});
+
+
+
 const Open_cart = document.getElementById("openCart");
 Open_cart.addEventListener('click', opening_cart);
 const ButtonBottom = document.getElementById('bottombutton');
@@ -87,52 +113,52 @@ function sendnotification(name) {
     }, 4000)
 }
 
+// updating total
+function total(price) {
+
+    tval = document.getElementById('total-value').textContent;
+    const total = document.getElementById('total-value')
+    const sum = parseFloat(price) + parseFloat(tval);
+    total.textContent = sum;
+}
+
+const cart = document.getElementById('cartitems');
+
+cart.addEventListener('click', (event) => {
+
+    if (event.target.id == 'remove') {
+        const cname = event.target.parentNode.className;
+        let price = 0;
+        let elements = document.querySelectorAll(`.${cname}`)
+
+        for (let i = 0; i < elements.length; i++) {
+            if (elements[i].id == 'price') {
+                price = elements[i].textContent;
+            }
+        }
+        removeFromCart(cname)
+        subtraction(price);
+    }
+}
+)
+
+//removing from cart
+function removeFromCart(cname) {
+    const item = document.getElementById('itemlist')
+    const quantity = document.getElementById('quantity');
+    const prices = document.getElementById('pricelist')
+    item.remove(cname);
+    quantity.remove(cname);
+    prices.remove(cname);
+
+}
 //updating total
-// function total(price) {
-
-//     tval = document.getElementById('total-value').textContent;
-//     const total = document.getElementById('total-value')
-//     const sum = parseFloat(price) + parseFloat(tval);
-//     total.textContent = sum;
-// }
-
-// const cart = document.getElementById('cartitems');
-
-// cart.addEventListener('click', (event) => {
-
-//     if (event.target.id == 'remove') {
-//         const cname = event.target.parentNode.className;
-//         let price = 0;
-//         let elements = document.querySelectorAll(`.${cname}`)
-
-//         for (let i = 0; i < elements.length; i++) {
-//             if (elements[i].id == 'price') {
-//                 price = elements[i].textContent;
-//             }
-//         }
-//         removeFromCart(cname)
-//         subtraction(price);
-//     }
-// }
-// )
-
-// //removing from cart
-// function removeFromCart(cname) {
-//     const item = document.getElementById('itemlist')
-//     const quantity = document.getElementById('quantity');
-//     const prices = document.getElementById('pricelist')
-//     item.remove(cname);
-//     quantity.remove(cname);
-//     prices.remove(cname);
-
-// }
-// //updating total
-// function subtraction( price) {
-//     const total = document.getElementById('total-value');
-//     const tval =document.getElementById('total-value').textContent;
-//     const new_total = parseFloat(tval) - parseFloat(price);
-//     total.textContent = new_total;
-// }
+function subtraction(price) {
+    const total = document.getElementById('total-value');
+    const tval = document.getElementById('total-value').textContent;
+    const new_total = parseFloat(tval) - parseFloat(price);
+    total.textContent = new_total;
+}
 
 
 
